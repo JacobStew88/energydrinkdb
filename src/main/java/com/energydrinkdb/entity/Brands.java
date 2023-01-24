@@ -1,5 +1,6 @@
 package com.energydrinkdb.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,14 +14,18 @@ import lombok.Data;
 @Table(name = "brands")
 public class Brands {
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private int brand_PK;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int brand_pk;
+
+	@Column(name = "brand_name")
+	private String brand_name;
 	
+	@Column(name = "volume")
+	private String volume;
 	
-	private String brand;
-	private int volume;
-	private int flavor_FK;
-	private int nutrition_FK;
+	@Column(name = "manufacturer_fk")
+	private int manufacturer_fk;
+	
 	
 }

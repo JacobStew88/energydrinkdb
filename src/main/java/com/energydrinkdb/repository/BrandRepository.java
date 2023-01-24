@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.energydrinkdb.entity.Brands;
 
-@Repository
+@Repository("brandRepository")
 public interface BrandRepository extends JpaRepository<Brands, Integer>{
 	
 }
