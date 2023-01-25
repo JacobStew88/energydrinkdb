@@ -3,15 +3,10 @@ INSERT INTO manufacturers (manufacturer_name) VALUES ('coca cola');
 INSERT INTO manufacturers (manufacturer_name) VALUES ('pepsi');
 
 -- Brands table
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('RED_BULL', '8oz', '1');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('RED_BULL', '12oz', '1');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('RED_BULL', '16oz', '1');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('MONSTER', '12oz', '1');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('MONSTER', '16oz', '1');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('MONSTER', '24oz', '2');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('ROCKSTAR', '12oz', '2');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('ROCKSTAR', '16oz', '2');
-INSERT INTO brands (brand_name, volume, manufacturer_fk) VALUES('XYIENCE_XENERGY', '16oz', '2');
+INSERT INTO brands (brand_name, manufacturer_fk) VALUES('RED_BULL', '1');
+INSERT INTO brands (brand_name, manufacturer_fk) VALUES('MONSTER', '1');
+INSERT INTO brands (brand_name, manufacturer_fk) VALUES('ROCKSTAR', '2');
+INSERT INTO brands (brand_name, manufacturer_fk) VALUES('XYIENCE_XENERGY', '2');
 
 -- nutrition facts table
 -- original redbull 8oz 1
@@ -129,25 +124,25 @@ INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('1', '12');
 INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('1', '13');
 
 -- MONSTER
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('5', '1');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('5', '4');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('5', '14');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('5', '15');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('5', '16');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('5', '17');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('2', '1');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('2', '4');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('2', '14');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('2', '15');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('2', '16');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('2', '17');
 
 -- ROCKSTART
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('8', '1');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('8', '4');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('8', '9');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('8', '18');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('8', '19');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('8', '20');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('3', '1');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('3', '4');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('3', '9');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('3', '18');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('3', '19');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('3', '20');
 
 -- Xyience Xenergy
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('9', '21');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('9', '22');
-INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('9', '23');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('4', '21');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('4', '22');
+INSERT INTO energy_flavors (brand_pk, flavor_pk) VALUES('4', '23');
 
 
 

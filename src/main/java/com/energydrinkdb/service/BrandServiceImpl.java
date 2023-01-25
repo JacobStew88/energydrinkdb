@@ -33,23 +33,26 @@ public class BrandServiceImpl implements BrandService {
 		return brandRepository.findAll();
 	}
 
+	//this is also get
 	@Override
 	public Brands getBrandsByPK(int brand_pk) {
 		return brandRepository.findById(brand_pk).orElseThrow(() -> new ResourceNotFoundException
 				("energyDrink", "PK", brand_pk));
 	}
 
+	//this is update
 	@Override
 	public Brands updateBrands(Brands brands, int brand_pk) {
 		Brands existingEnergyDrink = brandRepository.findById(brand_pk).orElseThrow(() -> new ResourceNotFoundException
 				("energyDrink", "PK", brand_pk));
 		existingEnergyDrink.setBrand_name(brands.getBrand_name());
-		existingEnergyDrink.setVolume(brands.getVolume());
+		existingEnergyDrink.setManufacturer_fk(brands.getManufacturer_fk());
 		brandRepository.save(existingEnergyDrink);
 		
 		return existingEnergyDrink;
 	}
 
+	//this is delete
 	@Override
 	public void deleteBrands(int brand_pk) {
 		Brands existingEnergyDrink = brandRepository.findById(brand_pk).orElseThrow(() -> new ResourceNotFoundException
