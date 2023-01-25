@@ -11,18 +11,13 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "brands")
-public class Brands {
-	
+@Table(name = "manufacturers")
+public class Manufacturers {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int brand_pk;
-
-	@Column(name = "brand_name")
-	private String brand_name;
+	private int manufacturer_pk;
 	
-	@Column(name = "manufacturer_fk")
-	private int manufacturer_fk;
-	
-	
+	@Column(name = "manufacturer_name")
+	private String manufacturer_name;
 }

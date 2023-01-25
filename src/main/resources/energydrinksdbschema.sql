@@ -13,7 +13,6 @@ DROP TABLE IF EXISTS manufacturers;
   CREATE TABLE brands(
   brand_pk int NOT NULL AUTO_INCREMENT,
   brand_name varchar(30) NOT NULL,
-  volume varchar(30) NOT NULL,
   manufacturer_fk int NOT NULL,
   PRIMARY KEY (brand_pk),
   FOREIGN KEY (manufacturer_fk) REFERENCES manufacturers (manufacturer_pk)
@@ -45,6 +44,11 @@ DROP TABLE IF EXISTS manufacturers;
   FOREIGN KEY (flavor_pk) REFERENCES flavors (flavor_pk) ON DELETE CASCADE,
   UNIQUE KEY (brand_pk, flavor_pk)
 );
+
+ALTER TABLE manufacturers AUTO_INCREMENT = 1;
+ALTER TABLE brands AUTO_INCREMENT = 1;
+ALTER TABLE nutrition_facts AUTO_INCREMENT = 1;
+ALTER TABLE flavors AUTO_INCREMENT = 1;
   
   
 

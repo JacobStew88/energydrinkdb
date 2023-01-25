@@ -30,8 +30,7 @@ public class BrandController {
 		this.brandService = brandService;
 	}
 	
-	
-	//Create a brand of energyDrinks
+	//Create a brand of energy drinks
 	@PostMapping()
 	public ResponseEntity<Brands> saveEnergyDrinks(@RequestBody Brands brands){
 		return new ResponseEntity<Brands>
@@ -44,21 +43,21 @@ public class BrandController {
 		return brandService.getAllBrands();
 	}
 	
-	//get drink by PK
+	//get brand by PK
 	@GetMapping("/{brand_pk}")
 	public ResponseEntity<Brands>getEnergyDrinksByPK(@PathVariable("brand_pk") int brand_PK){
 		return new ResponseEntity<Brands>
 		(brandService.getBrandsByPK(brand_PK), HttpStatus.OK);
 	}
 	
-	//Updating
+	//Updating the brand
 	@PutMapping("/{brand_pk}")
 	public ResponseEntity<Brands> UpdateEnergyDrinks(@PathVariable("brand_pk") int brand_PK, 
 			@RequestBody Brands brands){
 		return new ResponseEntity<Brands>(brandService.updateBrands(brands, brand_PK), HttpStatus.OK);
 	}
 	
-	//Delete
+	//Delete an entire brand
 	@DeleteMapping("/{brand_pk}")
 	public ResponseEntity<String> deleteEnergyDrinks(@PathVariable("brand_pk") int brand_PK) {
 		brandService.deleteBrands(brand_PK);

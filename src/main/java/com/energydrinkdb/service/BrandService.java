@@ -7,7 +7,7 @@ import com.energydrinkdb.entity.Brands;
 
 public interface BrandService {
 
-	//post a energy drink... CREATE
+	//post a brand... CREATE
 	public Brands saveBrands(Brands brands);
 	
 	//get all brands
@@ -16,9 +16,9 @@ public interface BrandService {
 	//get by PK
 	public Brands getBrandsByPK(int brand_pk);
 		
-	//update energy drinks
+	//update brand
 	public Brands updateBrands(Brands brands, int brand_pk);
 		
-	//delete energy drinks
+	//delete brand
 	public void deleteBrands(int brand_pk);
 }
